@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Utforska och öppna appar från Bohicuss.">
+  <title>Bohicuss App Store</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./apps.js"></script>
+  <script defer src="./store.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="./"><span class="mark" aria-hidden="true">✦</span> Bohicuss <span class="brand-detail">/ App Store</span></a>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-copy">
+        <h1 id="title">App Store<span>.</span></h1>
+        <p>Utforska apparna och öppna den du vill använda.</p>
+        <div class="search">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="search" aria-label="Sök bland appar" placeholder="Sök bland appar">
+        </div>
+      </div>
+      <div class="art" aria-hidden="true"><div class="orbit"></div><span class="tile t1">✦</span><span class="tile t2">↗</span><span class="tile t3">◒</span><span class="tile t4">✳</span></div>
+    </section>
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="catalog-head">
+        <h2 id="catalog-title">Utforska appar</h2>
+        <p id="count" role="status"></p>
+      </div>
+      <div id="filters" class="filters" role="group" aria-label="Filtrera på kategori"></div>
+      <div id="apps" class="grid"></div>
+      <p id="empty" class="empty" hidden></p>
+      <noscript><p>Aktivera JavaScript för att visa apparna.</p></noscript>
+    </section>
+    <template id="card">
+      <article class="card">
+        <div class="card-head">
+          <span class="app-icon" aria-hidden="true"></span>
+          <a class="open">Öppna <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="category"></p>
+        <h3></h3>
+        <p class="description"></p>
+      </article>
+    </template>
+  </main>
+  <footer class="wrap end">Bohicuss App Store</footer>
+</body>
+</html>
